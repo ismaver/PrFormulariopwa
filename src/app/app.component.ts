@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'NotaFORMS';
+  title = 'notaforms';
+
+  paginas=[
+    {enlace: 'formul', path: 'paginas/formul'},
+    {enlace: 'notaformul', path: 'paginas/notaformul'}
+  ]
 }

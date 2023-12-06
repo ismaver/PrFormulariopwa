@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "formularionotas-e4017"
+  },
+  "targets": {
+    "formularionotas-e4017": {
+      "hosting": {
+        "NotaFORMS": [
+          "formularionotas-e4017"
+        ]
+      }
+    }
+  }
+}

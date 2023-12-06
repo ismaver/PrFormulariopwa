@@ -1,0 +1,32 @@
+.form-contenedor{
+  background-color: antiquewhite;
+  width: 300px;
+  height: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(183, 183, 183);
+  border-radius: 10px;
+  margin: 50px;
+  margin-top: 0px;
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 400px) {
+
+  .form-contenedor{
+      width: auto;
+      height: auto;
+  }
+
+  .form-text input{
+      width: 250px;
+  }
+
+  .form-text textarea{
+      min-width: 250px;
+  }
+
+}

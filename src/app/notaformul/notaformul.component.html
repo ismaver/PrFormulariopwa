@@ -1,0 +1,224 @@
+<h1>Futuros Proyectos</h1>
+<div class="columnas">
+  <!-- Recorremos la lista materias y obtenemos los datos y los almacenamos en la variable "t" -->
+
+  <div *ngFor="let t of programacion" class="notas-cargadas">
+    <h2>{{t.nombre}}</h2>
+    <div class="tarea-res">
+      {{t.resenia}}
+    </div>
+
+    <!-- Contenedor de los botones -->
+    <div class="btn-edit-elim">
+      <!-- Botones para editar y eliminar las notas-->
+      <button class="btn" (click)="editarNota(t)" >Editar Nota</button>
+      <button class="btn" (click)="eliminarNota(t)" >Eliminar Nota</button>
+    </div>
+
+
+    <div class="contenedor-form-edit">
+
+      <!-- Contenedor del formulario para la edicion de las notas -->
+      <div *ngIf="mostrarFormulario && t == notaEditando" class="form-edit-nota">
+
+        <!-- Formulario edicion de notas -->
+        <form action="" id="formularioNota" class="form-text">
+          <label for="nombreNota">Nombre de la Nota: </label>
+          <br>
+          <textarea id="nombre" name="nombre" type="text" placeholder=" nota" #nombre
+            class="nombre">{{t.nombre}}</textarea>
+          <br><br>
+
+          <label for="">Escriba: </label>
+          <br>
+
+          <textarea name="resenia" id="resenia" cols="30" rows="10" placeholder=" escribir" #resenia
+            class="form-textarea">{{t.resenia}}</textarea>
+          <br><br>
+
+          <label for="opciones">Categoria: </label>
+          <select name="opciones" id="opciones" [(ngModel)]="categoria" placeholder="Seleccione">Seleccione
+            <option value="Programacion">Programacion</option>
+            <option value="Lenguaje">Lenguaje</option>
+            <option value="Matematicas">Matematicas</option>
+            <option value="Embebidos">Sis.Embebidos</option>
+          </select>
+          <br><br>
+
+          <button type="submit" (click)="actualizarNota(t)">Guardar</button>
+          <button type="submit" (click)="cancelarEdicion()">Cancelar</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="columnas">
+  <!-- Recorremos la lista materias y obtenemos los datos y los almacenamos en la variable "t" -->
+
+  <div *ngFor="let t of lenguaje" class="notas-cargadas">
+    <h2>{{t.nombre}}</h2>
+    <div class="tarea-res">
+      {{t.resenia}}
+    </div>
+
+    <!-- Contenedor de los botones -->
+    <div class="btn-edit-elim">
+      <!-- Botones para editar y eliminar las notas-->
+      <button class="btn" (click)="editarNota(t)" >Editar Nota</button>
+      <button class="btn" (click)="eliminarNota(t)" >Eliminar Nota</button>
+    </div>
+
+
+    <div class="contenedor-form-edit">
+
+      <!-- Contenedor del formulario para la edicion de las notas -->
+      <div *ngIf="mostrarFormulario && t == notaEditando" class="form-edit-nota">
+
+        <!-- Formulario edicion de notas -->
+        <form action="" id="formularioNota" class="form-text">
+          <label for="nombreNota">Nombre de la Nota: </label>
+          <br>
+          <textarea id="nombre" name="nombre" type="text" placeholder=" nota" #nombre
+            class="nombre">{{t.nombre}}</textarea>
+          <br><br>
+
+          <label for="">Escriba: </label>
+          <br>
+
+          <textarea name="resenia" id="resenia" cols="30" rows="10" placeholder=" escribir" #resenia
+            class="form-textarea">{{t.resenia}}</textarea>
+          <br><br>
+
+          <label for="opciones">Categoria: </label>
+          <select name="opciones" id="opciones" [(ngModel)]="categoria" placeholder="Seleccione">Seleccione
+            <option value="Programacion">Programacion</option>
+            <option value="Lenguaje">Lenguaje</option>
+            <option value="Matematicas">Matematicas</option>
+            <option value="Embebidos">Sis.Embebidos</option>
+          </select>
+          <br><br>
+
+          <button type="submit" (click)="actualizarNota(t)">Guardar</button>
+          <button type="submit" (click)="cancelarEdicion()">Cancelar</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!------------------->
+
+<div class="columnas">
+  <!-- Recorremos la lista materias y obtenemos los datos y los almacenamos en la variable "t" -->
+
+  <div *ngFor="let t of matematicas" class="notas-cargadas">
+    <h2>{{t.nombre}}</h2>
+    <div class="tarea-res">
+      {{t.resenia}}
+    </div>
+
+    <!-- Contenedor de los botones -->
+    <div class="btn-edit-elim">
+      <!-- Botones para editar y eliminar las notas-->
+      <button class="btn" (click)="editarNota(t)" >Editar Nota</button>
+      <button class="btn" (click)="eliminarNota(t)" >Eliminar Nota</button>
+    </div>
+
+
+    <div class="contenedor-form-edit">
+
+      <!-- Contenedor del formulario para la edicion de las notas -->
+      <div *ngIf="mostrarFormulario && t == notaEditando" class="form-edit-nota">
+
+        <!-- Formulario edicion de notas -->
+        <form action="" id="formularioNota" class="form-text">
+          <label for="nombreNota">Nombre de la Nota: </label>
+          <br>
+          <textarea id="nombre" name="nombre" type="text" placeholder=" nota" #nombre
+            class="nombre">{{t.nombre}}</textarea>
+          <br><br>
+
+          <label for="">Escriba: </label>
+          <br>
+
+          <textarea name="resenia" id="resenia" cols="30" rows="10" placeholder=" escribir" #resenia
+            class="form-textarea">{{t.resenia}}</textarea>
+          <br><br>
+
+          <label for="opciones">Categoria: </label>
+          <select name="opciones" id="opciones" [(ngModel)]="categoria" placeholder="Seleccione">Seleccione
+            <option value="Programacion">Programacion</option>
+            <option value="Lenguaje">Lenguaje</option>
+            <option value="Matematicas">Matematicas</option>
+            <option value="Embebidos">Sis.Embebidos</option>
+          </select>
+          <br><br>
+
+          <button type="submit" (click)="actualizarNota(t)">Guardar</button>
+          <button type="submit" (click)="cancelarEdicion()">Cancelar</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="columnas">
+  <!-- Recorremos la lista materias y obtenemos los datos y los almacenamos en la variable "t" -->
+
+  <div *ngFor="let t of embebidos" class="notas-cargadas">
+    <h2>{{t.nombre}}</h2>
+    <div class="tarea-res">
+      {{t.resenia}}
+    </div>
+
+    <!-- Contenedor de los botones -->
+    <div class="btn-edit-elim">
+      <!-- Botones para editar y eliminar las notas-->
+      <button class="btn" (click)="editarNota(t)" >Editar Nota</button>
+      <button class="btn" (click)="eliminarNota(t)" >Eliminar Nota</button>
+    </div>
+
+
+    <div class="contenedor-form-edit">
+
+      <!-- Contenedor del formulario para la edicion de las notas -->
+      <div *ngIf="mostrarFormulario && t == notaEditando" class="form-edit-nota">
+
+        <!-- Formulario edicion de notas -->
+        <form action="" id="formularioNota" class="form-text">
+          <label for="nombreNota">Nombre de la Nota: </label>
+          <br>
+          <textarea id="nombre" name="nombre" type="text" placeholder=" nota" #nombre
+            class="nombre">{{t.nombre}}</textarea>
+          <br><br>
+
+          <label for="">Escriba: </label>
+          <br>
+
+          <textarea name="resenia" id="resenia" cols="30" rows="10" placeholder=" escribir" #resenia
+            class="form-textarea">{{t.resenia}}</textarea>
+          <br><br>
+
+          <label for="opciones">Categoria: </label>
+          <select name="opciones" id="opciones" [(ngModel)]="categoria" placeholder="Seleccione">Seleccione
+            <option value="Programacion">Programacion</option>
+            <option value="Lenguaje">Lenguaje</option>
+            <option value="Matematicas">Matematicas</option>
+            <option value="Embebidos">Sis.Embebidos</option>
+          </select>
+          <br><br>
+
+          <button type="submit" (click)="actualizarNota(t)">Guardar</button>
+          <button type="submit" (click)="cancelarEdicion()">Cancelar</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>

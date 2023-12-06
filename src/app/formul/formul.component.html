@@ -1,0 +1,30 @@
+<div class="form-contenedor">
+  <form action="" class="form-text">
+
+    <label for="nombreNota">Nombre Estudiante: </label>
+    <br>
+    <input type="text" placeholder=" Coloque su nombre" #nombre>
+    <br><br>
+
+    <label for="">Coloque su Nota: </label>
+    <br>
+
+    <textarea name="" id="" cols="20" rows="1" placeholder=" escribir" #resenia></textarea>
+    <br><br>
+
+    <label for="opciones">Categoria: </label>
+    <select name="opciones" id="opciones" [(ngModel)]="categoria" placeholder="Seleccione">Seleccione
+      <option value="Programacion">Programacion</option>
+      <option value="Lenguaje">Lenguaje</option>
+      <option value="Matematicas">Matematicas</option>
+      <option value="Embebidos">Sis.Embebidos</option>
+    </select>
+    <br><br>
+
+
+
+    <button type="submit" (click)="guardarNota(nombre, resenia)">Aceptar</button>
+  </form>
+</div>
+
+<router-outlet></router-outlet>

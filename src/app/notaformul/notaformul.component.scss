@@ -1,0 +1,39 @@
+/* Estilos generales para las notas */
+.notas-cargadas {
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: bisque;
+  padding: 20px;
+}
+
+/* Estilos específicos para dispositivos con un ancho máximo de 550px */
+@media only screen and (max-width: 550px) {
+  .notas-cargadas {
+    width: 100%;
+  }
+
+  .btn-edit-elim .btn {
+    font-size: 10px;
+    width: 80px;
+    height: 30px;
+  }
+
+  .btn {
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .form-text select {
+    width: 100px;
+    height: 30px;
+  }
+
+  .form-text button {
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
